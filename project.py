@@ -43,8 +43,9 @@ def main():
                    'Pathological fracture', 'Spiral fracture']
         
         prediction = classes[np.argmax(result)]
+        prediction2 = result[0][np.argmax(result)]
 
-        st.success(f'Prediction: {prediction}')
+        st.success(f'Prediction: {prediction} and {int(prediction2*100)} %')
 
 if __name__ == '__main__':
     main()
