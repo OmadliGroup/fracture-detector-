@@ -9,10 +9,10 @@ import io
 model = load_model('model.h5')
 
 def main():
-    st.title('Fracture Detection Web App')
-    st.write('***NOTE:** This app predicts fracture type based on the specific open-source data used to train this model*')
+    st.title('Fracture Detection Web Application')
+    st.write('**<span style="font-size:16px;">NOTE:</span>** This app predicts fracture type based on the specific Kaggle open-source data used to train given this model.', unsafe_allow_html=True)
     
-    uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png"])
+    uploaded_file = st.file_uploader("Please upload an image...", type=["jpg", "png"])
 
     if uploaded_file is not None:
         # Read the image file
